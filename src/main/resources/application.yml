@@ -1,0 +1,25 @@
+db-config:
+  data-sources:
+    -
+      name: data-base-1
+      strategy: postgres
+      url: jdbc:postgresql://localhost:5432/admin
+      table: users
+      user: admin
+      password: admin
+      mapping:
+        id: user_id
+        username: login
+        name: first_name
+        surname: last_name
+    - name: data-base-2
+      strategy: postgres
+      url: jdbc:postgresql://localhost:5432/postgres
+      table: user_table
+      user: admin
+      password: admin
+      mapping:
+        id: ldap_login
+        username: ldap_login
+        name: name
+        surname: surname
